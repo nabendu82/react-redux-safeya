@@ -1,4 +1,4 @@
-import { FETCH_USERS_REQUEST, FETCH_USERS_SUCCESS, FETCH_USERS_FAILURE } from "./userTypes"
+import { FETCH_USERS_REQUEST, FETCH_USERS_SUCCESS, FETCH_USERS_FAILURE } from './userTypes'
 
 const initialState = {
     loading: false,
@@ -6,8 +6,8 @@ const initialState = {
     error: ''
 }
 
-const reducer = (state = initialState, action) => {
-    switch(action.type){
+const reducer = (state=initialState, action) => {
+    switch(action.type) {
         case FETCH_USERS_REQUEST:
             return {
                 ...state,
@@ -25,7 +25,7 @@ const reducer = (state = initialState, action) => {
                 users: [],
                 error: action.payload
             }
+        default: return state
     }
 }
-
-export default reducer;
+export default reducer
